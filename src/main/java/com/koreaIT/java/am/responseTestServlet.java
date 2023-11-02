@@ -1,21 +1,24 @@
 package com.koreaIT.java.am;
 
-import java.io.IOException;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-@WebServlet("/home/gugudan")
-public class gugudanServlet extends HttpServlet {
+
+@WebServlet("/home/responseTest")
+public class responseTestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	//get방식
+       
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/home/jsp/gugudan.jsp").forward(request, response);
+
+		
+		request.getRequestDispatcher("/jsp/home/responseTest.jsp");
 		
 	}
+
 
 }
