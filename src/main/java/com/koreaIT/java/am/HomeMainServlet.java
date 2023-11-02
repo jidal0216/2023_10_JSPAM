@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 @WebServlet("/home/main2")
-public class HomeMainServlet2 extends HttpServlet {
+public class HomeMainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	
