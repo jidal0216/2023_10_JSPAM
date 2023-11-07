@@ -35,6 +35,17 @@ public class MemberDoJoinServlet extends HttpServlet {
 			conn = DriverManager.getConnection(url, Config.getDBUser(), Config.getDBPassWd());
 
 			SecSql sql = new SecSql();
+			sql.append("SELECT COUNT(*) FROM `member`");
+			sql.append("WHERE loginId = ?", loginId);
+			
+			int loginIdDupChk = DBUtil.selectRowIntValue(conn, sql);
+			
+			if (loginIdDupChk == 1) {
+				response.getWriter().append(String.format("<script>alert('%s은(는) 이미 사용중인 아이디입니다'); location.replace('join');</script>", loginId));
+				return;
+			}
+			
+			sql = new SecSql();
 			sql.append("INSERT INTO `member`");
 			sql.append("SET regDate = NOW(),");
 			sql.append("updateDate = NOW(),");

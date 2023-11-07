@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Article write</title>
 </head>
+
 <body>
 	<h1>게시물 작성</h1>
 	
@@ -17,7 +18,13 @@
 			내용 : <textarea name="body" placeholder="내용을 입력해주세요"></textarea>
 		</div>
 		
+		
+		
+		
+		
+		
 		<button>작성</button>
+		<button><a href="../home/main">취소</a></button>
 <!-- 		<input type="submit" value="작성" /> -->
 	</form>
 </body>
