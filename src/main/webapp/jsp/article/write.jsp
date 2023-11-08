@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+
 	<h1>게시물 작성</h1>
 	
 	<form action="doWrite" method="post">
@@ -19,8 +21,7 @@
 		</div>
 		
 		
-		
-		
+
 		
 		
 		<button>작성</button>

@@ -29,6 +29,7 @@ public class ArticleDoWriteServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		int loginedMemberId = (int) session.getAttribute("loginedMemberId");
+		
 		Connection conn = null;
 
 		try {
@@ -40,7 +41,7 @@ public class ArticleDoWriteServlet extends HttpServlet {
 			sql.append("INSERT INTO article");
 			sql.append("SET regDate = NOW(),");
 			sql.append("updateDate = NOW(),");
-			sql.append("memberId = ?,",loginedMemberId );
+			sql.append("memberId = ?,", loginedMemberId);
 			sql.append("title = ?,", title);
 			sql.append("body = ?", body);
 			
